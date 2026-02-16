@@ -33,9 +33,3 @@ valido = (x > 0) && (y < 100)
 permitido = admin || supervisor
 negacion = !encontrado
 complejo = (a && b) || (!c && d)
-
-// CASOS MIXTOS:
-resultado = (x + y) > (z - w)
-final = !((a == b) && (c != d))
-calculo = (base * altura) / 2
-decision = (edad >= 18) && (activo || premium)

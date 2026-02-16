@@ -181,7 +181,6 @@ gcc lex.yy.c -o java_lexer
 
 ### 2. Probar con diferentes archivos
 ```bash
-
 # Prueba específica de identificadores
 ./java_lexer test_identifiers.txt
 
@@ -191,8 +190,12 @@ gcc lex.yy.c -o java_lexer
 # Prueba de cadenas
 ./java_lexer test_strings.txt
 
+# Prueba de operadores
+./java_lexer test_operators.txt
+
 # Prueba con C# (otro lenguaje)
 ./java_lexer test_csharp.cs
+```
 
 
 ### 3. Entrada desde teclado
@@ -203,8 +206,10 @@ gcc lex.yy.c -o java_lexer
 
 ## Archivos de Prueba Incluidos
 
-- `test_identifiers.txt` - Casos específicos de identificadores
+- `test_identifiers.txt` - Casos específicos de identificadores Java
 - `test_numbers.txt` - Diferentes tipos de literales numéricos  
 - `test_strings.txt` - Cadenas con secuencias de escape
+- `test_operators.txt` - Operadores aritméticos, relacionales y lógicos
+- `test_csharp.cs` - Código en C# para probar otros lenguajes
 - `test_csharp.cs` - Código en C# para probar otros lenguajes
 

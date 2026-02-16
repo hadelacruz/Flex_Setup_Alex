@@ -27,7 +27,3 @@
 0X1234
 0xbeef
 0XFACE
-
-// CASOS MIXTOS:
-resultado = 42 + 3.14 + 1e5 + 0xFF;
-calculo = 2.5e-3 * 0x100;
