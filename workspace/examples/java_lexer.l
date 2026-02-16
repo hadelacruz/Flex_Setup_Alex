@@ -4,12 +4,10 @@
 
 int line_count = 1;
 int char_count = 1;
-int token_count = 0;
 
 void print_token(const char* type, const char* value) {
-    token_count++;
-    printf("Token #%d: %-15s | Value: %-20s | Line: %d, Pos: %d\n", 
-           token_count, type, value, line_count, char_count);
+    printf("Token(%s, '%s', line=%d, pos=%d)\n", 
+           type, value, line_count, char_count);
     char_count += strlen(value);
 }
 %}
@@ -76,12 +74,6 @@ int yywrap() {
     return 1;
 }
 
-void print_statistics() {
-    printf("\n=== ESTADISTICAS DEL ANALISIS ===\n");
-    printf("Total de tokens reconocidos: %d\n", token_count);
-    printf("Total de lineas procesadas: %d\n", line_count);
-    printf("==================================\n");
-}
 
 int main(int argc, char **argv) {
     printf("=== ANALIZADOR LEXICO COMPLETO ===\n");
@@ -100,7 +92,6 @@ int main(int argc, char **argv) {
     }
     
     yylex();
-    print_statistics();
     
     if (argc > 1 && yyin) {
         fclose(yyin);
