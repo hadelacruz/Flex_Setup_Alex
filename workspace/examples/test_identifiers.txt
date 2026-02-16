@@ -1,0 +1,30 @@
+// Prueba específica de identificadores Java
+
+// IDENTIFICADORES VÁLIDOS:
+validIdentifier
+_underscore
+Variable1
+my_variable
+camelCase
+PascalCase
+_123abc
+a1b2c3
+MAX_VALUE
+isValid
+hasProperty
+
+// IDENTIFICADORES CON NÚMEROS (válidos):
+var1
+test123
+value2D
+matrix3x3
+
+// CASOS ESPECIALES (válidos):
+$  // En algunos contextos Java permite $, pero nuestro lexer no lo incluye
+_  // Solo guión bajo
+a  // Una sola letra
+
+// Los siguientes NO son identificadores válidos en Java:
+// 123invalid  // No puede empezar con número
+// var-name    // No puede tener guión medio
+// class.name  // No puede tener punto

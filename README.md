@@ -135,3 +135,76 @@ Token(LPAREN, '(', line=1, pos=8)
 -   Generated files (`lex.yy.c`, `scanner`) are excluded from git
 -   Only commit your `.l` source files
 -   The container includes `gcc` for compiling the generated C code
+
+---
+
+# Ejercicio 2: Analizador Léxico Completo
+
+Implementación completa de un analizador léxico que reconoce:
+
+## Características Implementadas
+
+### 1. **Identificadores Java**
+- Comienzan con letra (a-zA-Z) o guion bajo (_)
+- Seguidos de letras, dígitos o guiones bajos
+- Ejemplos: `variable1`, `_identifier`, `camelCase`
+
+### 2. **Literales Numéricos**
+- **Enteros**: `42`, `123`
+- **Flotantes**: `3.14`, `99.99`
+- **Notación científica**: `1e5`, `2.3E-10`, `6.02e23`
+- **Hexadecimales**: `0xFF`, `0xABCD`, `0X1234`
+
+### 3. **Operadores**
+- **Aritméticos**: `+`, `-`, `*`, `/`
+- **Relacionales**: `==`, `!=`, `<`, `>`, `<=`, `>=`
+- **Lógicos**: `&&`, `||`, `!`
+
+### 4. **Comentarios**
+- **Línea**: `// comentario hasta final de línea`
+- **Multilínea**: `/* comentario que puede abarcar múltiples líneas */`
+
+### 5. **Cadenas Literales**
+- Entre comillas dobles: `"texto"`
+- Secuencias de escape: `\n`, `\t`, `\"`, `\\`
+- Ejemplo: `"Mensaje:\n\tHola \"Mundo\""`
+
+## Cómo Usar
+
+### 1. Compilar el analizador
+```bash
+# Dentro del contenedor Docker
+cd /workspace/examples
+flex java_lexer.l
+gcc lex.yy.c -o java_lexer
+```
+
+### 2. Probar con diferentes archivos
+```bash
+
+# Prueba específica de identificadores
+./java_lexer test_identifiers.txt
+
+# Prueba de números
+./java_lexer test_numbers.txt
+
+# Prueba de cadenas
+./java_lexer test_strings.txt
+
+# Prueba con C# (otro lenguaje)
+./java_lexer test_csharp.cs
+
+
+### 3. Entrada desde teclado
+```bash
+./java_lexer
+# Escribe código y presiona Ctrl+D para terminar
+```
+
+## Archivos de Prueba Incluidos
+
+- `test_identifiers.txt` - Casos específicos de identificadores
+- `test_numbers.txt` - Diferentes tipos de literales numéricos  
+- `test_strings.txt` - Cadenas con secuencias de escape
+- `test_csharp.cs` - Código en C# para probar otros lenguajes
+

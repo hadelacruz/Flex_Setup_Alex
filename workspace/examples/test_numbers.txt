@@ -1,0 +1,33 @@
+// Prueba específica de literales numéricos
+
+// ENTEROS:
+0
+42
+1234567
+999
+
+// FLOTANTES:
+3.14
+0.5
+123.456
+99.99
+
+// NOTACIÓN CIENTÍFICA:
+1e5
+2E10
+3.14e-2
+1.5E+10
+6.02e23
+9.8E-2
+
+// HEXADECIMALES:
+0x0
+0xFF
+0xABCD
+0X1234
+0xbeef
+0XFACE
+
+// CASOS MIXTOS:
+resultado = 42 + 3.14 + 1e5 + 0xFF;
+calculo = 2.5e-3 * 0x100;

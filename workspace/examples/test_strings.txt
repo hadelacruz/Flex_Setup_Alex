@@ -1,0 +1,23 @@
+// Prueba específica de cadenas literales
+
+// CADENAS BÁSICAS:
+"Hola Mundo"
+"Cadena simple"
+""  // Cadena vacía
+
+// CADENAS CON SECUENCIAS DE ESCAPE:
+"Nueva línea: \n"
+"Tabulación: \t"
+"Retorno de carro: \r" 
+"Comillas: \""
+"Backslash: \\"
+
+// CADENAS COMPLEJAS:
+"Mensaje completo:\n\tNombre: \"Juan\"\n\tRuta: C:\\Users\\Juan"
+"Datos: valor1\tvalor2\tvalor3"
+"Código: if (condicion) { return \"true\"; }"
+
+// MÚLTIPLES CADENAS EN UNA LÍNEA:
+nombre = "Juan";
+apellido = "Pérez";
+saludo = "Hola, " + nombre + " " + apellido;

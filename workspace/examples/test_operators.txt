@@ -1,0 +1,41 @@
+// Prueba específica de operadores
+
+// OPERADORES ARITMÉTICOS:
+a + b
+x - y  
+m * n
+p / q
+suma = valor1 + valor2
+resta = num1 - num2
+producto = base * altura
+cociente = dividendo / divisor
+
+// OPERADORES RELACIONALES:
+a == b
+x != y
+i < j
+k > l
+m <= n
+o >= p
+resultado1 = (edad >= 18)
+resultado2 = (nombre != "")
+resultado3 = (precio < 100)
+resultado4 = (cantidad > 0)
+condicion = (x <= y)
+validacion = (z >= limite)
+
+// OPERADORES LÓGICOS:
+condicion1 && condicion2
+estado1 || estado2
+!bandera
+activo = flag1 && flag2
+valido = (x > 0) && (y < 100)
+permitido = admin || supervisor
+negacion = !encontrado
+complejo = (a && b) || (!c && d)
+
+// CASOS MIXTOS:
+resultado = (x + y) > (z - w)
+final = !((a == b) && (c != d))
+calculo = (base * altura) / 2
+decision = (edad >= 18) && (activo || premium)
